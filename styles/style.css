@@ -422,10 +422,10 @@ main .load-container span::after {
   border-radius: 50%;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-animation: rotates 0.6s linear infinite;
-          animation: rotates 0.6s linear infinite;
-  -webkit-animation-delay: calc(50ms * var(--l));
-          animation-delay: calc(50ms * var(--l));
+  -webkit-animation: rotates 0.45s linear infinite;
+          animation: rotates 0.45s linear infinite;
+  -webkit-animation-delay: calc(37ms * var(--l));
+          animation-delay: calc(37ms * var(--l));
 }
 
 @media (max-width: 768px) {
