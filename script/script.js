@@ -18,9 +18,9 @@ if( localStorage.length > 0 && localStorage.getItem("dark") == "true" ){
 search_btn.addEventListener('click',function(){
 
     if(!/ /gi.test(search_input.value) && search_input.value.length > 0){
-        search_input.value = "";
        render();
-       getUser(url+search_input.value).then(render).catch(remove)
+       getUser(url+search_input.value).then(render).catch(remove);
+       search_input.value = "";
     }   
  
 
