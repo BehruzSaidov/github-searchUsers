@@ -32,6 +32,10 @@
 body{
     font-family: "Space Mono", monospace;
     padding: 80px 24px 80px 24px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
     background-color: var(--f2f);
     &.active{
         --c697: #ffffff;
@@ -48,6 +52,7 @@ body{
 }
 .max-width{
     max-width: 730px;
+    width: 100%;
     margin: 0 auto;
 }
 @import "header.scss";

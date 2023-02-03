@@ -22,11 +22,8 @@ search_btn.addEventListener('click',function(){
        getUser(url+search_input.value).then(render).catch(remove);
        search_input.value = "";
     }   
- 
 
 });
-
-
 
 dark.addEventListener('click',function(){
     document.body.classList.toggle('active');
