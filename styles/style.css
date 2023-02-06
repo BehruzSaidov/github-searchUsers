@@ -218,6 +218,11 @@ body.active {
 .header-bottom .btn-container span.active {
   display: block;
 }
+@media (max-width: 650px) {
+  .header-bottom .btn-container span.active {
+    display: none;
+  }
+}
 
 @media (max-width: 550px) {
   .header-bottom {

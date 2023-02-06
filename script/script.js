@@ -34,7 +34,8 @@ dark.addEventListener('click',function(){
 async function getUser(url){
 
     let user = await fetch(url);
-    if((user.status == 404) && document.body.clientWidth > 766) error.classList.add('active');
+
+    if((user.status != 200) && document.body.clientWidth > 650) error.classList.add('active');
 
     if(!user.ok) throw new Error("xatolik bo'ldi"); 
 
@@ -177,6 +178,7 @@ function render(user = false){
 
 function remove(err){
     document.querySelector('main')?.remove();
+    console.log(err);
 }
 
 function chesk(file){
