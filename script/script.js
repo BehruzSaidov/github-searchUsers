@@ -8,8 +8,13 @@ let timeFormat = Intl.DateTimeFormat('es-uz',{dateStyle: 'medium'});
 
 
 
+let cookieFiles = {}
 
-if( localStorage.length > 0 && localStorage.getItem("dark") == "true" ){
+for(let [key,value] of document.cookie.split(';').map(item=> item.split('='))){
+    cookieFiles[key] = value;
+}
+
+if(cookieFiles.dark){
     document.body.classList.add('active');
     darkModeChesk();
 };
@@ -27,7 +32,7 @@ search_btn.addEventListener('click',function(){
 
 dark.addEventListener('click',function(){
     document.body.classList.toggle('active');
-    localStorage.setItem('dark', JSON.stringify(document.body.classList.contains('active')));
+    document.cookie = `dark=${document.body.classList.contains('active')}`;
     darkModeChesk();
 })
 
