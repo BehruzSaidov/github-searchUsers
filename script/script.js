@@ -10,8 +10,12 @@ let timeFormat = Intl.DateTimeFormat('es-uz',{dateStyle: 'medium'});
 
 let cookieFiles = {}
 
-for(let [key,value] of document.cookie.split(';').map(item=> item.split('='))){
-    cookieFiles[key] = JSON.parse(value);
+for(let [key,value] of (document.cookie.split(';').map(item=> item.split('=')))){
+   try{
+        cookieFiles[key] = JSON.parse(value);
+   }catch{
+
+   }
 }
 
 if(cookieFiles.dark){
