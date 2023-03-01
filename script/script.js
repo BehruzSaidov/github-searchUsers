@@ -1,10 +1,10 @@
 
-let search_btn = document.querySelector('.search-btn');
-let search_input = document.querySelector('.search-input');
-let dark = document.querySelector('.dark-mode-container');
-let error = document.querySelector('.btn-container span')
-let url = 'https://api.github.com/users/';
-let timeFormat = Intl.DateTimeFormat('es-uz',{dateStyle: 'medium'});
+const search_btn = document.querySelector('.search-btn');
+const search_input = document.querySelector('.search-input');
+const dark = document.querySelector('.dark-mode-container');
+const error = document.querySelector('.btn-container span')
+const url = 'https://api.github.com/users/';
+const timeFormat = Intl.DateTimeFormat('es-uz',{dateStyle: 'medium'});
 
 
 

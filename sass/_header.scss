@@ -1,0 +1,125 @@
+.header{
+    margin-bottom: 24px;
+   &-top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    .logo{
+        font-weight: 700;
+        font-size: 26px;
+        color: var(--c222);
+    }
+    .dark-mode-container{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        column-gap: 16px;
+        align-items: center;
+        cursor: pointer;
+        span{
+            font-weight: 700;
+            font-size: var(--f-13);
+            color: var(--c697);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+        svg path{
+            fill: var(--c697);
+        }
+        span{
+            color: var(--c697);
+        }
+        &:hover svg path{
+            fill: var(--c888);
+        }
+        &:hover span{
+            color: var(--c888);
+        }
+
+        
+    }
+   }
+   &-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--fef);
+    padding: 9.5px 10px 9.5px 32px;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    border-radius: 15px;
+    .seach_icon{
+        margin-right: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    input{
+        font-family: "Space Mono", monospace;
+        flex: 1;
+        align-self: stretch;
+        outline: 0;
+        border: 0;
+        font-size: var(--f-18);
+        color: var(--c222);
+        background-color: transparent;
+        &::placeholder{
+            font-family: "Space Mono", monospace;
+            font-size: var(--f-18);
+            color: var(--c4b6);
+        }
+    }
+    .btn-container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 24px;
+        margin-left: 16px;
+        .search-btn{
+            font-family: "Space Mono", monospace;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 10px;
+            color: var(--fff);
+            background-color: var(--c007);
+            padding: 12.5px 24px;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            &:hover{
+                background-color: var(--c60a);
+            }
+        }
+        span{
+            font-weight: 700;
+            font-size: var(--f-15);
+            color: red;
+            display: none;
+            &.active{
+                display: block;
+                @media (max-width: 650px){
+                    display: none;
+                }
+            }
+        }
+    }
+   }
+}
+
+@media (max-width: 550px) {
+    .header{
+        &-bottom{
+            padding: 7px 7px 7px 16px;
+            .seach_icon{
+                margin-right: 10px;
+            }
+            .btn-container{
+                margin: 0;
+                .search-btn{
+                    padding: 12px 16px;
+                }
+            }
+        }
+    }
+    
+}
